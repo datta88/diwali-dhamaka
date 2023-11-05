@@ -1,0 +1,22 @@
+.greeting-container{
+    /* border: 1px solid black; */
+    margin: 30px;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgb(165, 175, 175);
+    position: relative;
+}
+.from-container{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 25px;
+    font-weight: 400;
+    
+}
+.to-container{
+    font-size: 25px;
+    font-weight: 400;
+}
