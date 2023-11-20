@@ -39,8 +39,14 @@ function Home() {
                     <img src={Lamp} className='diwali-lamp right-lamp' />
                 </div>
                 <p className='create-your-won'>Do you want to create your own Diwali Greeting? Custmiztion it here 👇</p>
-                <p className='url'>{import.meta.env.VITE_BASE_URL}?to={to}&from={from}&g={greetingNumber}&t={thimNumber}</p>
-                <div className='input-container'>
+                <p className='url' onClick={()=>{
+                    const url=  `${import.meta.env.VITE_BASE_URL}?to=${to}&from=${from}&g=${greetingNumber}&t=${thimNumber}`
+                    navigator.clipboard.writeText(url);
+                    alert('copy to clipborad')
+                }}>
+                    {import.meta.env.VITE_BASE_URL}?to={to}&from={from}&g={greetingNumber}&t={thimNumber}</p>
+               
+                    <div className='input-container'>
                 <input className="input-box" type='text' placeholder='To' onChange={(e)=>{setTo(e.target.value)}} value={to} />
                 <input className="input-box" type='text' placeholder='From' onChange={(e)=>{setFrom(e.target.value)}} value={from} />
                 <select className="input-box" value={greetingNumber} onChange={(e)=>{setGreetingNumber(e.target.value)}} >
